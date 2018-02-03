@@ -1,0 +1,46 @@
+$rect-width: 6px;
+$rect-height:12px;
+$animation-duration: 2s;
+$animation-delay: 1s;
+$total-react: 6;
+.loading-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(138, 134, 135, 0.63);
+    z-index: 1002;
+}
+
+.loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.rect {
+    position: absolute;
+    background: black;
+    width: $rect-width;
+    height: $rect-height;
+}
+
+@for $i from 1 through $total-react {
+    .rect:nth-child(#{$i}) {
+        margin-left: $rect-width * ( $i - 1);
+        animation: loading $animation-duration ease-in-out infinite;
+        animation-delay: -($animation-duration - ($i / $total-react));
+    }
+}
+
+@keyframes loading {
+    0%,
+    40%,
+    100% {
+        transform: scaleY(1);
+    }
+    70% {
+        transform: scaleY(4);
+    }
+}

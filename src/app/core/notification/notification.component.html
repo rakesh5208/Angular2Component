@@ -1,0 +1,14 @@
+<div class="notify-container" [@notifyAnimation]="notification.state">
+    <div class="notify-content">
+        <div class="notify-header" [ngClass]="getNotifyClass()">
+            <span> {{notification.type | uppercase }}</span>
+            <div class="notify-close" (click)="close()">
+                <a title="close">&times;</a>
+            </div>
+        </div>
+        <div class="notify-msg">
+            <span>{{notification.msg}}</span>
+        </div>
+
+    </div>
+</div>

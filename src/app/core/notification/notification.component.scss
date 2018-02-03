@@ -1,0 +1,66 @@
+$notify-width: 400px;
+$notify-height: 7em;
+$warning-color: #bb9712;
+$success-color: #2e902c;
+$danger-color: #ca002d;
+.notify-container {
+    position: fixed;
+    left: 50%;
+    top: 1em;
+    height: $notify-height;
+    box-shadow: 1px 0px 8px 1px #8c8c8c;
+    width: $notify-width;
+    margin-left: -$notify-width/2;
+    background: white;
+}
+
+.notify-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+    font-weight: 200;
+}
+
+.notify-content {
+    div {
+        display: inline-block;
+    }
+}
+
+.notify-header {
+    width: 100%;
+    text-align: center;
+    padding: 4px 0px;
+    color: white;
+}
+
+.notify-msg {
+    width: 90%;
+    color: #444242;
+}
+
+.notify-close {
+    float: right;
+    font-size: 24px;
+    a {
+        cursor: pointer;
+    }
+    margin-right: 10px;
+}
+
+.success-msg {
+    background-color: $success-color;
+}
+
+.error-msg {
+    background-color: $danger-color;
+}
+
+.warning-msg {
+    background-color: $warning-color;
+}
+
+.info-msg {
+    background-color: #3875ff;
+}
