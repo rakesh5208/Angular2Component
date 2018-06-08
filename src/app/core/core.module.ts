@@ -1,3 +1,4 @@
+import { LoadingModule } from './loading/loading.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -10,10 +11,11 @@ import { MenuComponent } from './menu/menu.component';
 @NgModule({
   imports: [
     CommonModule,
+    LoadingModule,
     BrowserAnimationsModule
   ],
-  declarations: [LoadingComponent, NotificationComponent, MenuComponent],
-  exports:[LoadingComponent,NotificationComponent],
-  providers:[NotificationService]
+  declarations: [NotificationComponent, MenuComponent],
+  exports: [LoadingModule, NotificationComponent],
+  providers: [NotificationService]
 })
 export class CoreModule { }

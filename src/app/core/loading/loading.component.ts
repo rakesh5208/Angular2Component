@@ -6,11 +6,9 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./loading.component.scss'],
   animations: [ ]
 })
-export class LoadingComponent {
+export class LoadingComponent  {
   numbers = new Array(6);
   @Input() loading: boolean;
+  @Input() type = 'rect';
   constructor() { }
-
-  ngOnInit() { }
-
 }

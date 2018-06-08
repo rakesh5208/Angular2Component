@@ -3,6 +3,7 @@ $rect-height:12px;
 $animation-duration: 2s;
 $animation-delay: 1s;
 $total-react: 6;
+$cl-black : #000;
 .loading-container {
     position: absolute;
     left: 0;
@@ -42,5 +43,24 @@ $total-react: 6;
     }
     70% {
         transform: scaleY(4);
+    }
+}
+//circle loading
+.loading-circle{
+    height: 40px;
+    width:40px;
+    border-right: 4px solid $cl-black;
+    border-top: 4px solid $cl-black;
+    border-left: 4px solid $cl-black;
+    border-bottom: 4px solid transparent;
+    border-radius: 50%;
+    animation: spin 1.5s  infinite linear;
+}
+@keyframes spin {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
     }
 }

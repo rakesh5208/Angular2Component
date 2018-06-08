@@ -1,5 +1,19 @@
 <div *ngIf="loading" class="loading-container">
-    <div class="loading">
-        <div *ngFor="let itr of numbers" class="rect"> </div>
-    </div>
+    <ng-container [ngSwitch]="type">
+        <ng-container *ngSwitchCase="'rect'">
+            <div class="loading">
+                <div *ngFor="let itr of numbers" class="rect"> </div>
+            </div>
+        </ng-container>
+        <ng-container *ngSwitchCase="'circle'">
+                <div class="loading">
+                    <div class="loading-circle"> </div>
+                </div>
+        </ng-container>
+        <ng-container *ngSwitchDefault>
+                <div class="loading">
+                    <div class="loading-circle"> </div>
+                </div>
+        </ng-container>
+    </ng-container>
 </div>

@@ -13,7 +13,7 @@ export class AppComponent {
   constructor(private notify: NotificationService) {
     this.init();
     setTimeout(() => {
-      this.isLoading = false;
+      this.isLoading = true;
     }, this.initial);
   }
 
