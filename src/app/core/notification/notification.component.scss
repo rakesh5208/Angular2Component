@@ -12,6 +12,7 @@ $danger-color: #ca002d;
     width: $notify-width;
     margin-left: -$notify-width/2;
     background: white;
+    z-index: 1;
 }
 
 .notify-content {
@@ -38,6 +39,7 @@ $danger-color: #ca002d;
 .notify-msg {
     width: 90%;
     color: #444242;
+    text-align: center;
 }
 
 .notify-close {
@@ -45,6 +47,8 @@ $danger-color: #ca002d;
     font-size: 24px;
     a {
         cursor: pointer;
+        color: white;
+        text-decoration: none;
     }
     margin-right: 10px;
 }
