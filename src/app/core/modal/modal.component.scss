@@ -4,6 +4,9 @@
     left: 0;
     height: 100%;
     width: 100%;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
 }
 
 .modal-container:after {
@@ -30,6 +33,7 @@
         max-height: 300px;
         overflow: auto;
     }
+    display: block;
 }
 
 .modal-header,

@@ -18,7 +18,8 @@ export class AppComponent {
   {
     label: 'Add Event',
     path: '/add-event'
-  }]
+  }];
+  modalState = false;
   constructor(private notify: NotificationService) {
     this.init();
     setTimeout(() => {
@@ -48,5 +49,8 @@ export class AppComponent {
         break;
 
     }
+  }
+  toogleModal(modalState){
+    this.modalState = modalState;
   }
 }

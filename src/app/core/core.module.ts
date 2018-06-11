@@ -12,7 +12,7 @@ import { NotificationService } from './notification/notification.service';
 import { MenuComponent } from './menu/menu.component';
 import { NotificationModule } from './notification/notification.module';
 import { PageBodyComponent } from './page-body/page-body.component';
-
+import {ModalModule} from './modal/modal.module'
 @NgModule({
   imports: [
     CommonModule,
@@ -21,6 +21,7 @@ import { PageBodyComponent } from './page-body/page-body.component';
     FooterModule,
     NavModule,
     PageBodyModule,
+    ModalModule,
     BrowserAnimationsModule
   ],
   declarations: [MenuComponent],
@@ -29,7 +30,8 @@ import { PageBodyComponent } from './page-body/page-body.component';
     NotificationModule,
     FooterModule,
     NavModule,
-    PageBodyModule
+    PageBodyModule,
+    ModalModule
   ],
   providers: []
 })

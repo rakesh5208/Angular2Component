@@ -28,6 +28,7 @@
             </li>
         </ul>
         <button (click)="showNotification()">Show Notification </button>
+        <button (click)="toogleModal(true)">Open Modal</button>
     </app-page-body>
 </div>
 <div>
@@ -35,3 +36,14 @@
         <div><span>This is fotter.</span></div>
     </app-footer>
 </div>
+<app-modal [show]="modalState">
+    <app-modal-header>
+        <div>This header</div>
+    </app-modal-header>
+    <app-modal-body>
+        <div>This body</div>
+    </app-modal-body>
+    <app-modal-footer>
+        <div><button (click)="toogleModal(false)">Close</button></div>
+    </app-modal-footer>
+</app-modal>
